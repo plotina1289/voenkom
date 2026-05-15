@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px;
+    scroll-behavior: smooth;
+    padding-top: 100px;
+}
+
+/* Header - фиксированный */
+header {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    color: #1a2a3a;
+    padding: 16px 24px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 1368px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-info img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+}
+
+/* Навигация */
+.header-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-button {
+    background-color: #fc4c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.nav-button i {
+    font-size: 1rem;
+    font-style: normal;
+}
+
+.nav-button:hover {
+    background-color:#fc4c00 ;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(252, 76, 0, 0.3);
+}
+
+/* Секции */
+.section {
+    background-color: white;
+    padding: 28px 24px;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    scroll-margin-top: 100px;
+    transition: box-shadow 0.2s;
+}
+
+.section:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+    color: #1a2a3a;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2 i {
+    color: #3498db;
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #495057;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+h4 {
+    color: #6c757d;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Контактная карточка */
+.contact-card {
+    background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%);
+    padding: 24px;
+    border-radius: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+}
+
+.contact-card h4 {
+    color: #1a2a3a;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.contact-card i {
+    color: #00acfc;
+    width: 28px;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    color: #2c3e50;
+    margin-left: 38px;
+    font-weight: 500;
+}
+
+.contact-card strong {
+    color: #1a2a3a;
+}
+
+.divider {
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, transparent);
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+/* Портфолио */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Карточка-ссылка */
+a.portfolio-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eef2f7;
+}
+
+a.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h4 {
+    color: #1a2a3a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.portfolio-info p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Индикатор перехода */
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3498db;
+    font-weight: 600;
+    transition: gap 0.2s;
+}
+
+a.portfolio-item:hover .portfolio-link {
+    gap: 12px;
+}
+
+/* Форма */
+.form-description {
+    color: #6c757d;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a2a3a;
+}
+
+.form-group label i {
+    color: #3498db;
+    width: 22px;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 14px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(52,152,219,0.3);
+}
+
+/* Блок контактов */
+.contacts {
+    background: white;
+    color: #333;
+    padding: 28px 24px;
+    border-radius: 24px;
+    margin-top: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+}
+
+.contacts:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.contacts h2 {
+    color: #1a2a3a;
+    border-left-color: #3498db;
+}
+
+.contacts h2 i {
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    min-width: 220px;
+    background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f7 100%);
+    padding: 16px 20px;
+    border-radius: 18px;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #d4e4f7 0%, #bdd6f0 100%);
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    color: #fc4c00;
+}
+
+.contact-item h4 {
+    color: #1a2a3a;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.contact-item p {
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.contact-item small {
+    color: #6c757d;
+    font-size: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Кнопка наверх */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1001;
+    opacity: 0.7;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #fc4c00, #e04400);
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+/* Анимация появления секций */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* ========== ПЛАНШЕТЫ (768px - 992px) ========== */
+@media (max-width: 992px) {
+    body {
+        padding: 12px;
+        padding-top: 95px;
+    }
+    
+    header {
+        width: calc(100% - 24px);
+        padding: 12px 20px;
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========== МОБИЛЬНЫЕ (до 768px) ========== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        padding-top: 85px;
+    }
+
+    header {
+        padding: 12px 16px;
+        top: 8px;
+        width: calc(100% - 20px);
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .header-info {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .header-info img {
+        max-width: 280px;
+        width: 100%;
+        min-width: 180px;
+        margin: 0 auto;
+    }
+
+    .header-nav {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-button {
+        padding: 7px 12px;
+        font-size: 0.7rem;
+    }
+    
+    .nav-button i {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        padding-left: 12px;
+    }
+    
+    h2 i {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 18px 16px;
+        border-radius: 18px;
+        scroll-margin-top: 85px;
+    }
+
+    .contact-card {
+        padding: 16px;
+    }
+    
+    .contact-card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .contact-card p {
+        margin-left: 34px;
+        font-size: 0.85rem;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .portfolio-info {
+        padding: 14px;
+    }
+    
+    .portfolio-info h4 {
+        font-size: 1rem;
+    }
+    
+    .portfolio-info p {
+        font-size: 0.85rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-item {
+        min-width: auto;
+        padding: 12px 16px;
+    }
+    
+    .contact-icon {
+        font-size: 1.4rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .back-to-top i {
+        font-size: 1rem;
+    }
+    
+    footer {
+        font-size: 0.7rem;
+        padding: 15px;
+    }
+}
+
+/* ========== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px) ========== */
+@media (max-width: 480px) {
+    body {
+        padding-top: 75px;
+    }
+    
+    header {
+        padding: 10px 12px;
+    }
+    
+    .header-nav {
+        gap: 6px;
+    }
+
+    .nav-button {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    
+    .nav-button i {
+        font-size: 0.7rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        scroll-margin-top: 75px;
+        padding: 14px 12px;
+    }
+    
+    .contact-card {
+        padding: 12px;
+    }
+    
+    .contact-card p {
+        margin-left: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .contact-card h4 {
+        font-size: 0.85rem;
+    }
+    
+    .contact-card i {
+        width: 22px;
+        font-size: 1rem;
+    }
+    
+    .header-info img {
+        max-width: 220px;
+        width: 100%;
+        min-width: 150px;
+        margin: 0 auto;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px 12px;
+    }
+    
+    .contacts {
+        padding: 18px 16px;
+    }
+    
+    .contact-item {
+        padding: 10px 14px;
+        gap: 12px;
+    }
+}
+
+/* ========== БОЛЬШИЕ ЭКРАНЫ (от 1400px) ========== */
+@media (min-width: 1400px) {
+    body {
+        padding: 20px;
+        padding-top: 110px;
+    }
+    
+    header {
+        max-width: 1360px;
+        padding: 20px 32px;
+    }
+    
+    .section {
+        padding: 32px 28px;
+    }
+    
+    .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ========== ТАЧ-УСТРОЙСТВА ========== */
+@media (hover: none) {
+    .nav-button:active,
+    .submit-btn:active,
+    .portfolio-link:active,
+    .contact-item:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+}
